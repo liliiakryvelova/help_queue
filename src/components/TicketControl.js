@@ -9,11 +9,12 @@ class TicketControl extends React.Component {
     this.state = {
       formVisibleOnPage: false
     }
+    this.handleClick = this.handleClick.bind(this); //specific line of code that binds our function
   }
   // handleClick = () => {
   //   this.setState({formVisibleOnPage: true});
   // }
-  handleClick = () => {
+  handleClick() {
     this.setState(prevState => ({
       formVisibleOnPage: !prevState.formVisibleOnPage
     }));
